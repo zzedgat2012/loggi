@@ -1,41 +1,211 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+    line-height: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+ol, ul {
+    list-style: none;
 }
 
-.card {
-  padding: 2em;
+blockquote, q {
+    quotes: none;
 }
 
-.read-the-docs {
-  color: #888;
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 50;
+    width: 100%;
+}
+
+.Menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    height: 100px;
+    padding: 0 60px;
+    width: 100%;
+}
+
+.MenuItems {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MenuPages {
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.MenuPages li {
+    margin: 0 10px;
+    padding-left: 50px;
+}
+
+.MenuPages a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: medium;
+    font-weight: bold;
+    color: black;
+}
+
+.MenuPages a img {
+    transition: all 0.2s ease 0s;
+}
+
+.MenuPages a:hover img{
+    transform: translateX(5px);
+}
+
+.MenuCTA {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MenuCTA ul {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.MenuCTA li {
+    padding-left: 40px;
+    list-style: none;
+}
+
+.MenuCTA a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: medium;
+    font-weight: bold;
+    color: black;
+}
+
+.MenuPages img {
+    height: 15px;
+    margin: 0 0 0 5px;
+}
+
+.ButtonCTA{
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: medium;
+    font-weight: 400;
+    color: white;
+    padding: 20px 35px 20px 35px;
+    border-radius: 50px;
+    border: none;
+    background-color: #006aff;
+    transition: 200ms ease-in;
+}
+
+.ButtonCTA:hover {
+    background-color: #0095ff;
+    cursor: pointer;
+}
+
+.ButtonCTA img {
+    height: 15px;
+    margin: 0 0 0 5px;
+    transition: all 0.2s ease 0s;
+}
+
+.ButtonCTA:hover img {
+    transform: translateX(5px);
+}
+
+.Hero {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 145px 150px;
+}
+
+.Hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 70px;
+}
+
+.Hero h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: xx-large;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 45px;
+}
+
+.HeroCTA {
+    display: flex;
+    gap: 20px;
+}
+
+.BgHero {
+    position: absolute;
+    top: 0;
+    z-index: -5;
+    height: 110vh;
+    object-fit: cover;
+    object-position: 50% 50%;
+    width: 100%;
 }

@@ -1,34 +1,54 @@
-    import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import {useState} from 'react'
+import logo from './assets/logo.svg'
+import arrow from './assets/icons/arrow.svg'
+import arrow_white from './assets/icons/arrow_white.svg'
+import bg from './assets/black_woman_bg.webp'
+import {Button, NavMenu} from './components'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+    const [count, setCount] = useState(0)
 
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    return (
+        <>
+            <section>
+                <div>
+                    {/*TODO Make buttons a component*/}
+                    <nav>
+                        <div className="Menu">
+                            <div className="MenuLogo">
+                                <img src={logo} alt="Logo"/>
+                            </div>
+                            <div className="MenuItems">
+                                <ul className="MenuPages">
+                                    <li><a href="">Enviar pacotes <img src={arrow} alt=""/></a></li>
+                                    <li><a href="">Rastrear pacotes <img src={arrow} alt=""/></a></li>
+                                    <li><a href="">Fazer entregas <img src={arrow} alt=""/></a></li>
+                                </ul>
+                            </div>
+                            <div className="MenuCTA">
+                                <ul>
+                                    <li><a href="">Central de Ajuda</a></li>
+                                    <li>
+                                        <button className="ButtonCTA">Entrar</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div className="Hero">
+                    <h1>Vem com <br/> a Loggi!</h1>
+                    <h2>Tecnologia que <br/> simplifica sua <br/> experiência de envios.</h2>
+                    <div className="HeroCTA">
+                        <Button icon={<img src={arrow_white} alt=""/>}>Quero ser Cliente</Button>
+                        <Button icon={<img src={arrow_white} alt=""/>}>Quero rastrear um pacote</Button>
+                    </div>
+                </div>
+                <img className="BgHero" src={bg} alt=""/>
+            </section>
+        </>
+    )
 }
 
 export default App

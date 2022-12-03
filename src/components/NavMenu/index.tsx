@@ -3,6 +3,9 @@ import logo from "../../assets/logo.svg";
 import arrow from "../../assets/icons/arrow.svg";
 import {Button} from "../Button";
 
+export function NavItem() {
+
+}
 export function NavMenu() {
     return (
         <nav>

@@ -1,0 +1,5 @@
+{
+    "excluded": [
+        "/node_modules"
+    ]
+}

@@ -41,8 +41,8 @@ function App() {
                     <h1>Vem com <br/> a Loggi!</h1>
                     <h2>Tecnologia que <br/> simplifica sua <br/> experiência de envios.</h2>
                     <div className="HeroCTA">
-                        <Button icon={<img src={arrow_white} alt=""/>}>Quero ser Cliente</Button>
-                        <Button icon={<img src={arrow_white} alt=""/>}>Quero rastrear um pacote</Button>
+                        <Button forwardArrowVariant="white">Quero ser Cliente</Button>
+                        <Button forwardArrowVariant="white">Quero rastrear um pacote</Button>
                     </div>
                 </div>
                 <img className="BgHero" src={bg} alt=""/>
